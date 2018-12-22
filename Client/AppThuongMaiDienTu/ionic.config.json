@@ -1,5 +1,7 @@
 {
-  "name": "AppThuongMaiDienTu",
-  "integrations": {},
-  "type": "angular"
+  "name": "ionic3-start-theme",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
 }

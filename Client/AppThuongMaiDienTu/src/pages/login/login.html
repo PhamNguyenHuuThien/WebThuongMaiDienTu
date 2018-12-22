@@ -1,0 +1,71 @@
+<!-- -->
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="login-content">
+
+    <!-- Logo -->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+      <h2 ion-text class="text-primary">
+        <strong>ỨNG DỤNG THƯƠNG MẠI ĐIỆN TỬ</strong>
+      </h2>
+    </div>
+
+    <!-- Login form -->
+    <form class="list-form">
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          Email
+        </ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+          Mật khẩu
+        </ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </form>
+
+    <p text-right ion-text color="secondary" tappable (click)="forgotPass()"><strong>Quên mật khẩu?</strong></p>
+
+    <div>
+      <button ion-button icon-start block color="dark" tappable (click)="login()">
+        <ion-icon name="log-in"></ion-icon>
+        ĐĂNG NHẬP
+      </button>
+
+      <p text-center ion-text color="secondary">Đăng nhập bằng:</p>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            <button ion-button icon-only block class="btn-facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-4>
+            <button ion-button icon-only block class="btn-twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-4>
+            <button ion-button icon-only block class="btn-gplus">
+              <ion-icon name="logo-googleplus"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </div>
+
+
+    <!-- Other links -->
+    <div text-center margin-top>
+      <span ion-text color="secondary" tappable (click)="register()">Khách hàng mới? <strong>Đăng ký</strong></span>
+    </div>
+
+  </div>
+</ion-content>
