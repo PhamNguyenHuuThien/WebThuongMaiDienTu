@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.ionicframework.ionicstartheme" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>App Thuong Mai Dien Tu</name>
-    <description>Ionic 3 Start Theme</description>
-    <author email="firminoata@gmail.com" href="https://ionictheme.com">Ionic Theme</author>
+    <description>Day la ung dung thuong mai dien tu</description>
+    <author email="bibi9768@gmail.com" href="https://fb.com/ThienIsTheLegend">PNHT</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
