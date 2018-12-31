@@ -17,7 +17,7 @@
           <ion-icon name="mail" item-start class="text-primary"></ion-icon>
           Email
         </ion-label>
-        <ion-input type="email"></ion-input>
+        <ion-input type="email" name="username"  [(ngModel)]="username"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -25,14 +25,14 @@
           <ion-icon name="lock" item-start class="text-primary"></ion-icon>
           Mật khẩu
         </ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
       </ion-item>
     </form>
 
     <p text-right ion-text color="secondary" tappable (click)="forgotPass()"><strong>Quên mật khẩu?</strong></p>
 
     <div>
-      <button ion-button icon-start block color="dark" tappable (click)="login()">
+      <button ion-button icon-start block color="dark" tappable (click)="login(username, password);">
         <ion-icon name="log-in"></ion-icon>
         ĐĂNG NHẬP
       </button>
