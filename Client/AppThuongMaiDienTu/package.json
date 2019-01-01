@@ -1,5 +1,5 @@
 {
-  "name": "App Thuong Mai Dien Tu",
+  "name": "AppThuongMaiDienTu",
   "version": "1.0.0",
   "author": "PNHT",
   "homepage": "https://fb.com/ThienIsTheLegend",
@@ -19,7 +19,7 @@
     "@angular/http": "4.4.4",
     "@angular/platform-browser": "4.4.4",
     "@angular/platform-browser-dynamic": "4.4.4",
-    "@angular/router": "^7.1.4",
+    "@angular/router": "^5.2.11",
     "@ionic-native/core": "3.12.1",
     "@ionic-native/device": "^4.2.1",
     "@ionic-native/keyboard": "^4.1.0",
