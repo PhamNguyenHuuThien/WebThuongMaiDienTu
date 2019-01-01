@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { WeatherProvider } from '../../services/weather';
 import { Storage } from '@ionic/storage';
-// import { HttpErrorResponse } from '@angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'page-local-weather',
@@ -55,9 +55,9 @@ export class LocalWeatherPage {
       this.location = location;
     }
 
-    this.weatherProvider.getWeather(this.location.state, this.location.city).subscribe((weather: any) => {
-      this.weather = weather.current_observation;
-    });
+    // this.weatherProvider.getWeather(this.location.state, this.location.city).subscribe((weather: any) => {
+    //   this.weather = weather.current_observation;
+    // });
   }
 
 }

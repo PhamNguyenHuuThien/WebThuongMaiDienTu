@@ -11,6 +11,7 @@ export class AuthService {
 
   // Gọi API login vào hệ thống
   login(tendangnhap: string, matkhau: string) {
+    ApiUrl="http://localhost";
     return this.http.post<any>(ApiUrl + '/dangnhap.php', { tendangnhap, matkhau });
   }
 
