@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import * as moment from 'moment';
 declare var ApiUrl: any;
+ @Injectable({providedIn: 'root'})
 
 export class AuthService {
 

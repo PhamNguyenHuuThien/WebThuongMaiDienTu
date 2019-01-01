@@ -4,6 +4,7 @@ import {HomePage} from "../home/home";
 import {RegisterPage} from "../register/register";
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import {AuthService} from './auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,8 +14,7 @@ import {AuthService} from './auth.service';
 export class LoginPage {
   public username;
   public password;
-  //public response;
-  constructor( public http: HttpClient,public nav: NavController, public forgotCtrl: AlertController, public menu: MenuController, public toastCtrl: ToastController) {
+  constructor(private authService: AuthService, private router: Router, public http: HttpClient,public nav: NavController, public forgotCtrl: AlertController, public menu: MenuController, public toastCtrl: ToastController) {
  this.menu.swipeEnable(false);
   }
 
@@ -28,34 +28,24 @@ export class LoginPage {
     console.log(username);
     console.log(password);
     console.log("Đăng nhập");
-  
-    // let data = {
-
-      // tendangnhap: this.username,
-      
-    // matkhau: this.password
-      
-    //   };
-      
-
-    
 
   // Gọi phương thức login của AuthService class mà chúng ta đã viết ở phía trên
-  // AuthService.login(username,password).subscribe(
-  //     response => {
-  //       if (response.sucess) {
+  this.authService.login(username,password).subscribe(
+      response => {
+        if (response.sucess) {
 
-  //         // Đăng nhập thành công thì lưu lại JWT vào storage, sau đó redirect tới trang dahshboard
-  //         this.authService.setSession(response);
-  //         this.router.navigateByUrl('/dashboard');
-  //       } else {
-  //         this.formErrorMessage = response.message;
-  //       }
-  //     },
-  //     error => {
-  //       this.formErrorMessage = 'Lỗi kết nối tới máy chủ';
-  //     }
-  //   );
+          // Đăng nhập thành công thì lưu lại JWT vào storage, sau đó redirect tới trang dahshboard
+          this.authService.setSession(response);
+          //this.router.navigateByUrl('/dashboard');
+          this.nav.setRoot(HomePage);
+        } else {
+          console.log( response.message);
+        }
+      },
+      error => {
+        console.log( 'Lỗi kết nối tới máy chủ');
+      }
+    );
   
   
       

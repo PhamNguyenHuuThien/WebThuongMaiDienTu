@@ -25,6 +25,7 @@ import {TripDetailPage} from "../pages/trip-detail/trip-detail";
 import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 import {SanPham} from "../pages/sanpham/sanpham";
+import { AuthService } from "../pages/login/auth.service";
 
 // import services
 // end import services
@@ -81,7 +82,8 @@ import {SanPham} from "../pages/sanpham/sanpham";
     Keyboard,
     ActivityService,
     TripService,
-    WeatherProvider
+    WeatherProvider,
+    AuthService 
   ]
 })
 
