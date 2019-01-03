@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders ,HttpParams} from '@angular/common/http';
 import { Router } from '@angular/router';
 import * as moment from 'moment';
 declare var ApiUrl: any;
@@ -7,12 +7,19 @@ declare var ApiUrl: any;
 
 export class AuthService {
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient) { }
 
   // Gọi API login vào hệ thống
   login(tendangnhap: string, matkhau: string) {
-    ApiUrl="http://localhost";
-    return this.http.post<any>(ApiUrl + '/dangnhap.php', { tendangnhap, matkhau });
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/x-www-form-urlencoded');
+    let params = new HttpParams().set('tendangnhap', tendangnhap); // create params object
+    params = params.append('matkhau', matkhau); // add a new param, creating a new object
+    //params = params.append('param3', value3); // add another param 
+
+    //let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };
+    //return this.http.post('http://localhost:81/dangnhap.php', { 'tendangnhap':tendangnhap, 'matkhau':matkhau},options);
+    return this.http.post<any>('http://localhost:81/dangnhap.php',{tendangnhap ,matkhau}, {headers: headers});
   }
 
   // Lưu JWT ra localStorage

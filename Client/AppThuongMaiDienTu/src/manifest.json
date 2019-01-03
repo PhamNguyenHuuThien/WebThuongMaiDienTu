@@ -1,10 +1,10 @@
 {
-  "name": "ionic3-start-theme",
-  "short_name": "ionic3-start-theme",
+  "name": "AppThuongMaiDienTu",
+  "short_name": "AppThuongMaiDienTu",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
-    "src": "assets/img/logo.png",
+    "src": "assets/img/shopLogo.png",
     "sizes": "512x512",
     "type": "image/png"
   }],

@@ -26,6 +26,7 @@ import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 import {SanPham} from "../pages/sanpham/sanpham";
 import { AuthService } from "../pages/login/auth.service";
+import { Router } from "@angular/router";
 
 // import services
 // end import services
@@ -83,7 +84,7 @@ import { AuthService } from "../pages/login/auth.service";
     ActivityService,
     TripService,
     WeatherProvider,
-    AuthService 
+    AuthService
   ]
 })
 
