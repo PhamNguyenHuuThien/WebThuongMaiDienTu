@@ -75,7 +75,8 @@ import { Router } from "@angular/router";
     RegisterPage,
     SearchLocationPage,
     TripDetailPage,
-    TripsPage
+    TripsPage,
+    SanPham
   ],
   providers: [
     StatusBar,
