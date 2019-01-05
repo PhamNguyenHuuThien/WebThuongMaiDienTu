@@ -19,7 +19,8 @@ export class AuthService {
 
     //let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };
     //return this.http.post('http://localhost:81/dangnhap.php', { 'tendangnhap':tendangnhap, 'matkhau':matkhau},options);
-    return this.http.post<any>('http://localhost:81/dangnhap.php',{tendangnhap ,matkhau}, {headers: headers});
+    //return this.http.post<any>('http://localhost:81/dangnhap.php',{tendangnhap ,matkhau}, {headers: headers});
+    return this.http.post<any>('http://huuthien.byethost8.com/API/DangNhap.php',{tendangnhap ,matkhau}, {headers: headers});
   }
 
   // Lưu JWT ra localStorage
