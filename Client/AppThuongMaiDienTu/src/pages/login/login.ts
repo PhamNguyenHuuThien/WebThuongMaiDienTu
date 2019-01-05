@@ -94,7 +94,7 @@ else{
           });
           toast.present();
           // Đăng nhập thành công thì lưu lại JWT vào storage, sau đó redirect tới trang dahshboard
-          this.authService.setSession(result);
+          this.authService.setSession(result.jwt);
           //this.router.navigateByUrl('/dashboard');
           this.nav.setRoot(HomePage);
         }
