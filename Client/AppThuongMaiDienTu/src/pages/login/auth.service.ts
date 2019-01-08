@@ -20,7 +20,8 @@ export class AuthService {
 
 
     //return this.http.post<any>('http://localhost:81/dangnhap.php',{tendangnhap ,matkhau}, {headers: headers});
-    return this.http.post<any>('http://huuthien.byethost8.com/API/DangNhap.php',{tendangnhap ,matkhau}, {headers: headers});
+    //return this.http.post<any>('http://huuthien.byethost8.com/API/DangNhap.php',{tendangnhap ,matkhau}, {headers: headers});
+    return this.http.post<any>('http://thien.opestek.com/API/DangNhap.php',{tendangnhap ,matkhau}, {headers: headers});
   }
 
   // Lưu JWT ra localStorage
