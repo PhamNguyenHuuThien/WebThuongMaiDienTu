@@ -13,12 +13,12 @@ export class AuthService {
   login(tendangnhap: string, matkhau: string) {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/x-www-form-urlencoded');
+    headers.append('Cookie','abc')
     let params = new HttpParams().set('tendangnhap', tendangnhap); // create params object
     params = params.append('matkhau', matkhau); // add a new param, creating a new object
     //params = params.append('param3', value3); // add another param 
 
-    //let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };
-    //return this.http.post('http://localhost:81/dangnhap.php', { 'tendangnhap':tendangnhap, 'matkhau':matkhau},options);
+
     //return this.http.post<any>('http://localhost:81/dangnhap.php',{tendangnhap ,matkhau}, {headers: headers});
     return this.http.post<any>('http://huuthien.byethost8.com/API/DangNhap.php',{tendangnhap ,matkhau}, {headers: headers});
   }

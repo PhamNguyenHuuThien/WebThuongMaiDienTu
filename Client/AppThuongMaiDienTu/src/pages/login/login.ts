@@ -24,6 +24,7 @@ export class LoginPage {
 
   // login and go to home page
   login(username:string,password:string) {
+    this.nav.setRoot(HomePage);
     
     console.log(username);
     console.log(password);
