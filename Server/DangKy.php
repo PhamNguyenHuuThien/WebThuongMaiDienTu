@@ -1,6 +1,6 @@
 <?php
 // required headers
-header("Access-Control-Allow-Origin: http://localhost/rest-api-authentication-example/");
+header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
@@ -24,10 +24,15 @@ $user = new User($db);
 $data = json_decode(file_get_contents("php://input"));
  
 // set product property values
-$user->ho = $data->firstname;
-$user->lastname = $data->lastname;
+$user->ho = $data->ho;
+$user->ten = $data->ten;
+$user->sodienthoai = $data->sodienthoai;
+$user->tendangnhap = $data->tendangnhap;
 $user->email = $data->email;
-$user->password = $data->password;
+$user->matkhau = $data->matkhau;
+$user->ten = $data->ten;
+$user->noicongtac = $data->noicongtac;
+$user->diachi = $data->diachi;
  
 // use the create() method here
 

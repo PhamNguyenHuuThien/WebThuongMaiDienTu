@@ -95,16 +95,18 @@ function KTTaiKhoancotontai(){
     // query to check if email exists
     $query = "SELECT *
             FROM " . $this->table_name . "
-            WHERE tendangnhap = ? ";
+            WHERE tendangnhap = ? or email = ?";
  
     // prepare the query
     $stmt = $this->conn->prepare( $query );
  
     // sanitize
     $this->tendangnhap=htmlspecialchars(strip_tags($this->tendangnhap));
+    $this->email=htmlspecialchars(strip_tags($this->email));
  
     // bind given email value
     $stmt->bindParam(1, $this->tendangnhap);
+    $stmt->bindParam(1, $this->email);
  
     // execute the query
     $stmt->execute();
