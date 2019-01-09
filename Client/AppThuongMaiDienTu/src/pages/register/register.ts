@@ -9,12 +9,18 @@ import {HomePage} from "../home/home";
   templateUrl: 'register.html'
 })
 export class RegisterPage {
+public ho:string;
+public ten:string;
+public email:string;
+public tendangnhap:string;
+public matkhau:string;
 
   constructor(public nav: NavController) {
   }
 
   // register and go to home page
-  register() {
+  register(ho:string,ten:string,email:string,tendangnhap:string,matkhau:string) {
+    console.log("Hiển thị trang đăng ký");
     this.nav.setRoot(HomePage);
   }
 
