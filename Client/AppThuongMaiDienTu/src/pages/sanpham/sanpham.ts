@@ -29,7 +29,7 @@ export class SanPham {
   //get data
   getData() {
     let path = '../assets/data/data.json'
-    let data: Observable<any> = this.http.get(path);
+    let data: Observable<any> = this.http.get('http://huuthien.byethost8.com/API/GetSanPham.php');
     data.subscribe(result => {
       console.log(result)
     })
