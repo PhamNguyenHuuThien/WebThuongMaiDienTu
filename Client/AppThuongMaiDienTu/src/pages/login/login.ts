@@ -4,6 +4,7 @@ import {HomePage} from "../home/home";
 import {RegisterPage} from "../register/register";
 import {AuthService} from './auth.service';
 import { Router } from '@angular/router';
+import { load } from "@angular/core/src/render3";
 
 
 
@@ -94,16 +95,17 @@ else{
 
   loading.present();
 
-  setTimeout(() => {
-    loading.dismiss();
-    let alert = this.alertCtrl.create({
-      title: 'Thông báo',
-      subTitle: 'Máy chủ không phản hồi',
-      buttons: ['Đồng ý']
-    });
-    alert.present();
+  // setTimeout(() => {
+  //   if(loading){
+  //   loading.dismiss();
+  //   let alert = this.alertCtrl.create({
+  //     title: 'Thông báo',
+  //     subTitle: 'Máy chủ không phản hồi',
+  //     buttons: ['Đồng ý']
+  //   });
+  //   alert.present();}
     
-  }, 50000);
+  // }, 10000);
 
 
   // Gọi phương thức login của AuthService class mà chúng ta đã viết ở phía trên
@@ -154,6 +156,13 @@ else{
         }
       },
       error => {
+        loading.dismiss();
+    let alert = this.alertCtrl.create({
+      title: 'Thông báo',
+      subTitle: 'Máy chủ không phản hồi',
+      buttons: ['Đồng ý']
+    });
+    alert.present();
       //   console.log( 'Lỗi kết nối tới máy chủ');
   }
   );
