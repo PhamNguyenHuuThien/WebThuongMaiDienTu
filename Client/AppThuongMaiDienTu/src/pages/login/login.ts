@@ -94,9 +94,16 @@ else{
 
   loading.present();
 
-  // setTimeout(() => {
-  //   loading.dismiss();
-  // }, 2000);
+  setTimeout(() => {
+    loading.dismiss();
+    let alert = this.alertCtrl.create({
+      title: 'Thông báo',
+      subTitle: 'Máy chủ không phản hồi',
+      buttons: ['Đồng ý']
+    });
+    alert.present();
+    
+  }, 50000);
 
 
   // Gọi phương thức login của AuthService class mà chúng ta đã viết ở phía trên
