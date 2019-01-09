@@ -1,10 +1,10 @@
 <?php
-// required headers
-header("Access-Control-Allow-Origin: http://localhost/rest-api-authentication-example/");
-header("Content-Type: application/json; charset=UTF-8");
-header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Max-Age: 3600");
-header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+//required headers
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
+header('Access-Control-Allow-Credentials: true');
+header('X-Content-Type-Options: Access-Control-Allow-Headers');
  
 // database connection will be here
 // files needed to connect to database
@@ -25,6 +25,7 @@ $data = json_decode(file_get_contents("php://input"));
 // set product property values
 $user->tendangnhap = $data->tendangnhap;
 $email_exists = $user->KTTaiKhoancotontai();
+
  
 // files for jwt will be here
 // check if given email exist in the database
@@ -68,6 +69,8 @@ if($email_exists && password_verify($data->matkhau, $user->matkhau) ){
     echo json_encode(
             array(
                 "message" => "Successful login.",
+                "ho"=>$user->ho,
+                "ten" => $user->ten,
                 "jwt" => $jwt
             )
         );
@@ -79,10 +82,10 @@ if($email_exists && password_verify($data->matkhau, $user->matkhau) ){
 else{
  
     // set response code
-    http_response_code(401);
+   // http_response_code(401);
  
     // tell the user login failed
     echo json_encode(array("message" => "Login failed."));
 }
-
+exit();
 ?>

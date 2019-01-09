@@ -2,10 +2,22 @@
 class Database{
  
     // specify your own database credentials
-    private $host = "localhost";
-    private $db_name = "appthuongmaidientu";
-    private $username = "root";
-    private $password = "";
+    // private $host = "localhost";
+    // private $db_name = "appthuongmaidientu";
+    // private $username = "root";
+    // private $password = "";
+    // private $host = "sql304.byethost.com";
+    // private $db_name = "b8_21339020_AppThuongMaiDienTu";
+    // private $username = "b8_21339020";
+    // private $password = "1071998";
+    // private $host = "db4free.net";
+    // private $db_name = "thuongmaidientu";
+    // private $username = "huuthien";
+    // private $password = "thien1123";
+    private $host = "azcctv.net";
+    private $db_name = "thien_appthuongmaidientu";
+    private $username = "thien";
+    private $password = "123456";
     public $conn;
  
     // get the database connection
@@ -23,4 +35,5 @@ class Database{
         return $this->conn;
     }
 }
+
 ?>

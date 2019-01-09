@@ -1,9 +1,10 @@
 import {Component} from "@angular/core";
-import {NavController, AlertController, ToastController, MenuController} from "ionic-angular";
+import {LoadingController,NavController, AlertController, ToastController, MenuController} from "ionic-angular";
 import {HomePage} from "../home/home";
 import {RegisterPage} from "../register/register";
 import {AuthService} from './auth.service';
 import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -13,7 +14,8 @@ import { Router } from '@angular/router';
 export class LoginPage {
   public username:string;
   public password:string;
-  constructor( public authService: AuthService,public nav: NavController, public forgotCtrl: AlertController, public menu: MenuController, public toastCtrl: ToastController) {
+  public check:boolean;
+  constructor(private alertCtrl: AlertController,public loadingCtrl: LoadingController, public authService: AuthService,public nav: NavController, public forgotCtrl: AlertController, public menu: MenuController, public toastCtrl: ToastController) {
  this.menu.swipeEnable(false);
   }
 
@@ -24,38 +26,54 @@ export class LoginPage {
 
   // login and go to home page
   login(username:string,password:string) {
-    this.nav.setRoot(HomePage);
-    
+    //this.nav.setRoot(HomePage);
+   
+
+
+
+
     console.log(username);
     console.log(password);
     console.log("Đăng nhập");
-
+    
     if(username=="" || username==null )
     {
-      let toast = this.toastCtrl.create({
-        showCloseButton: true,
-        message: 'Bạn chưa nhập tên đăng nhập!',
-        duration: 3000,
-        position: 'bottom'
+      // let toast = this.toastCtrl.create({
+      //   showCloseButton: true,
+      //   message: 'Bạn chưa nhập tên đăng nhập!',
+      //   duration: 3000,
+      //   position: 'bottom'
+      // });
+      // toast.onDidDismiss(() => {
+      //   console.log('Dismissed toast');
+      // });
+      // toast.present();
+      let alert = this.alertCtrl.create({
+        title: 'Thông báo',
+        subTitle: 'Bạn chưa nhập tên đăng nhập',
+        buttons: ['Đồng ý']
       });
-      toast.onDidDismiss(() => {
-        console.log('Dismissed toast');
-      });
-      toast.present();
+      alert.present();
     }
     else
     if( password==""||password==null)
     {
-      let toast = this.toastCtrl.create({
-        showCloseButton: true,
-        message: 'Bạn chưa nhập mật khẩu!',
-        duration: 3000,
-        position: 'bottom'
+      // let toast = this.toastCtrl.create({
+      //   showCloseButton: true,
+      //   message: 'Bạn chưa nhập mật khẩu!',
+      //   duration: 3000,
+      //   position: 'bottom'
+      // });
+      // toast.onDidDismiss(() => {
+      //   console.log('Dismissed toast');
+      // });
+      // toast.present();
+      let alert = this.alertCtrl.create({
+        title: 'Thông báo',
+        subTitle: 'Bạn chưa nhập mật khẩu',
+        buttons: ['Đồng ý']
       });
-      toast.onDidDismiss(() => {
-        console.log('Dismissed toast');
-      });
-      toast.present();
+      alert.present();
     }
 else{
   // let toast = this.toastCtrl.create({
@@ -70,7 +88,15 @@ else{
   // toast.present();
   // this.nav.setRoot(HomePage);
 
+  let loading = this.loadingCtrl.create({
+    content: 'Đang đăng nhập...'
+  });
 
+  loading.present();
+
+  // setTimeout(() => {
+  //   loading.dismiss();
+  // }, 2000);
 
 
   // Gọi phương thức login của AuthService class mà chúng ta đã viết ở phía trên
@@ -84,6 +110,7 @@ else{
       let hoten= result.ho + " "+ result.ten;
       console.log('User Logged in as: ', hoten);
         if (result.message=="Successful login.") {
+          loading.dismiss();
           let toast = this.toastCtrl.create({
             showCloseButton: true,
             message: 'Xin chào ' + hoten +' !',
@@ -100,17 +127,23 @@ else{
           this.nav.setRoot(HomePage);
         }
          if(result.message=="Login failed.") {
-          let toast = this.toastCtrl.create({
-            showCloseButton: true,
-            message: 'Đăng nhập thất bại. Hãy kiểm tra lại tên đăng nhập và mật khẩu!',
-            duration: 3000,
-            position: 'bottom'
+          loading.dismiss();
+          // let toast = this.toastCtrl.create({
+          //   showCloseButton: true,
+          //   message: 'Đăng nhập thất bại. Hãy kiểm tra lại tên đăng nhập và mật khẩu!',
+          //   duration: 3000,
+          //   position: 'bottom'
+          // });
+          // toast.onDidDismiss(() => {
+          //   console.log('Dismissed toast');
+          // });
+          // toast.present();
+          let alert = this.alertCtrl.create({
+            title: 'Thông báo',
+            subTitle: 'Đăng nhập thất bại. Hãy kiểm tra lại tên đăng nhập và mật khẩu!',
+            buttons: ['Đồng ý']
           });
-          toast.onDidDismiss(() => {
-            console.log('Dismissed toast');
-          });
-          toast.present();
-          
+          alert.present();
         }
       },
       error => {
