@@ -8,33 +8,13 @@
 </ion-header>
 
 <ion-content padding class="common-bg">
- <ion-card class="full-width" no-margin margin-bottom>
-   <ion-card-content no-padding>
-
-     <ion-item>
-       
-     </ion-item>
-
-   </ion-card-content>
- </ion-card>
-
- <ion-grid class="card" padding >
-   <ion-row>
-       <ion-col width-50 offset-25>
-        
-       </ion-col>
-   </ion-row>
-   <ion-row>
-       <ion-col width-100>
-           <ion-list>
-
-               <ion-item>
-               
-               </ion-item>
-               
-
-           </ion-list>
-       </ion-col>
-   </ion-row>
- </ion-grid>
+        <ion-card *ngFor="let item of items">
+                <img src="http://thien.opestek.com/API/Images/{{item.hinhminhhoa}}"/>
+                <ion-card-header>
+                    <ion-card-title>{{item.TenSP}}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <p>The content for this card</p>
+                </ion-card-content>
+            </ion-card>
 </ion-content>

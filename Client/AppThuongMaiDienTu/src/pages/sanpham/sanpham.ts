@@ -11,7 +11,7 @@ import { Observable } from "rxjs";
   templateUrl: 'sanpham.html'
 })
 export class SanPham {
-
+  public items:any;
   constructor(public nav: NavController, public http: HttpClient) {
     this.getData();
   }
@@ -28,10 +28,11 @@ export class SanPham {
 
   //get data
   getData() {
-    let path = '../assets/data/data.json'
-    let data: Observable<any> = this.http.get('http://huuthien.byethost8.com/API/GetSanPham.php');
-    data.subscribe(result => {
+    let url = 'http://thien.opestek.com/API/GetSanPham.php'
+    let data: Observable<any> = this.http.get(url);
+    data.subscribe(result => { 
       console.log(result)
+      this.items=result.sanpham;
     })
   }
 }
