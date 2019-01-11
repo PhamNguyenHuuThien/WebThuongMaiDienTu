@@ -14,7 +14,7 @@ class Database{
     // private $db_name = "thuongmaidientu";
     // private $username = "huuthien";
     // private $password = "thien1123";
-    private $host = "azcctv.net";
+    private $host = "localhost";
     private $db_name = "thien_appthuongmaidientu";
     private $username = "thien";
     private $password = "123456";
