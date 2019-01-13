@@ -116,7 +116,10 @@ else{
 
   this.authService.login(username,password)
     .subscribe((result) => {
-      let hoten= result.ho + " "+ result.ten;
+      let hoten = result.ho + " "+ result.ten;
+     // sessionStorage.removeItem('hoten');
+      sessionStorage.setItem('hoten', hoten); //Lưu vào session
+      //hoten=localStorage.getItem('hoten');
       console.log('User Logged in as: ', hoten);
         if (result.message=="Successful login.") {
           loading.dismiss();

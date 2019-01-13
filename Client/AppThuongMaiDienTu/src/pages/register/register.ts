@@ -30,7 +30,7 @@ public matkhau:string;
     });
   
     loading.present();
-
+if(ho!=""&&ten!=""&&email!=""&&sodienthoai!=""&&diachi!=""&&tendangnhap!=""&&matkhau!="" &&ho!=null&&ten!=null&&sodienthoai!=null&&diachi!=null&&tendangnhap!=null&&matkhau!=null){
     this.XLDK.register(ho,ten,email,sodienthoai,diachi,tendangnhap,matkhau)
     .subscribe((result)=>
     {
@@ -59,8 +59,28 @@ public matkhau:string;
         alert.present();
 
       }
-    })
-    //this.nav.setRoot(HomePage);
+      //else{console.log(result.message)}
+    },
+    error => {
+      loading.dismiss();
+    let alert = this.alertCtrl.create({
+    title: 'Thông báo',
+    subTitle: 'Không thể kết nối đến máy chủ',
+    buttons: ['Đồng ý']
+  });
+  alert.present();
+  });
+}
+  else{
+    let alert = this.alertCtrl.create({
+      title: 'Chú ý',
+      subTitle: 'Vui lòng nhập đầy đủ tất cả thông tin',
+      buttons: ['Đồng ý']
+    });
+    alert.present();
+
+
+  }
   }
 
   // go to login page

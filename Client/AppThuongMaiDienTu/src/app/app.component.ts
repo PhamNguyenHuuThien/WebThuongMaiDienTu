@@ -22,6 +22,8 @@ export interface MenuItem {
 })
 
 export class MyApp {
+
+public hoten:string;
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = LoginPage;
@@ -42,9 +44,11 @@ export class MyApp {
       {title: 'Thời tiết', component: LocalWeatherPage, icon: 'partly-sunny'}
 
     ];
+    this.hoten=sessionStorage.getItem('hoten');
   }
 
   initializeApp() {
+    this.hoten=sessionStorage.getItem('hoten');
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
 
@@ -62,13 +66,20 @@ export class MyApp {
   }
 
   openPage(page) {
+    
+    
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+    
   }
 
   logout() {
+    
+    sessionStorage.removeItem('hoten');
+    //console.log(sessionStorage.getItem('hoten'));
     this.nav.setRoot(LoginPage);
+    
   }
 
 }

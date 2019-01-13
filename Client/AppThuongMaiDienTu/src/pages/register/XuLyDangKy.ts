@@ -14,7 +14,7 @@ export class XuLyDangKy {
     console.log("Hiển thị trang đăng ký");
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/x-www-form-urlencoded');
-    headers.append('Cookie','abc')
+    headers.append('Cookie','abc');
     let params = new HttpParams().set('ho', ho); // create params object
     params = params.append('ten', ten); // add a new param, creating a new object
     params = params.append('email', email); // add another param 
@@ -23,7 +23,7 @@ export class XuLyDangKy {
     params = params.append('tendangnhap', tendangnhap); // add another param 
     params = params.append('matkhau', matkhau); // add another param 
 
-    return this.http.post<any>('http://thien.opestek.com/API/DangKy.php',{ho,ten,email,sodienthoai,diachi,tendangnhap,matkhau}, {headers: headers});
+    return this.http.post<any>('http://thien.opestek.com/API/DangKy.php',{ho,ten,sodienthoai,diachi,tendangnhap,matkhau,email}, {headers: headers});
 
     //this.nav.setRoot(HomePage);
   }

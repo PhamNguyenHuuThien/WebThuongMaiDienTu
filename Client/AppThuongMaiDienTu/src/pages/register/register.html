@@ -36,14 +36,14 @@
       </ion-item>
       <ion-item>
         <ion-label floating>
-          <ion-icon name="phone" item-start class="text-primary"></ion-icon>
+          <ion-icon name="call" item-start class="text-primary"></ion-icon>
           Số điện thoại
         </ion-label>
         <ion-input name="email" type="number" [(ngModel)]="sodienthoai"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>
-          <ion-icon name="address" item-start class="text-primary"></ion-icon>
+          <ion-icon name="home" item-start class="text-primary"></ion-icon>
           Địa chỉ
         </ion-label>
         <ion-input name="email" type="text" [(ngModel)]="diachi"></ion-input>
@@ -65,7 +65,7 @@
     </form>
 
     <div margin-top>
-      <button ion-button block color="dark" tappable (click)="register(ho,ten,email,tendangnhap,matkhau)">
+      <button ion-button block color="dark" tappable (click)="register(ho,ten,email,sodienthoai,diachi,tendangnhap,matkhau)">
         Đăng ký
       </button>
 
