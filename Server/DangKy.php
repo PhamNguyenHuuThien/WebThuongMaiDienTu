@@ -27,15 +27,15 @@ $data = json_decode(file_get_contents("php://input"));
 $user->ho = $data->ho;
 $user->ten = $data->ten;
 $user->sodienthoai = $data->sodienthoai;
-$user->tendangnhap = $data->tendangnhap;
-$user->email = $data->email;
-$user->matkhau = $data->matkhau;
-$user->ten = $data->ten;
-$user->noicongtac = $data->noicongtac;
 $user->diachi = $data->diachi;
+$user->tendangnhap = $data->tendangnhap;
+$user->matkhau = $data->matkhau;
+$user->email = $data->email;
+
  
 // use the create() method here
-
+echo ("Tạo tk");
+// echo (TaoTaiKhoan());
 // create the user
 if($user->TaoTaiKhoan()){
  

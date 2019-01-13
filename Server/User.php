@@ -11,7 +11,6 @@ class User{
     public $ho;
     public $ten;
     public $sodienthoai;
-    public $noicongtac;
     public $diachi;
     public $tendangnhap;
     public $matkhau;
@@ -33,55 +32,53 @@ function TaoTaiKhoan(){
  
     // insert query
     $query = "INSERT INTO " . $this->table_name . "
-            SET
-                ho = :ho,
-                ten = :ten,
-                sodienthoai = :sodienthoai,
-                noicongtac = :noicongtac,
-                diachi = :diachi,
-                tendangnhap = :tendangnhap,
-                matkhau = :matkhau,
-                email = :email,
-                laadmin = 0,
-                daduyet = 1,
-                thoigian = ". date('Y-m-d H:i:s') . ",
-                facebook=:facebook,
-                viber=:viber,
-                skype=:skype";
+            VALUE (
+                last_insert_id(),
+                :ho,
+                :ten,
+                :sodienthoai,
+                :diachi,
+                :tendangnhap,
+                :matkhau,
+                :email,
+                 0,
+                1,
+                now()
+                )";
  
     // prepare the query
     $stmt = $this->conn->prepare($query);
  
     // sanitize
     $this->ho=htmlspecialchars(strip_tags($this->ho));
-    $this->ten=htmlspecialchars(strip_tags($this->lastname));
+    $this->ten=htmlspecialchars(strip_tags($this->ten));
     $this->sodienthoai=htmlspecialchars(strip_tags($this->sodienthoai));
-    $this->noicongtac=htmlspecialchars(strip_tags($this->noicongtac));
     $this->diachi=htmlspecialchars(strip_tags($this->diachi));
     $this->tendangnhap=htmlspecialchars(strip_tags($this->tendangnhap));
     $this->matkhau=htmlspecialchars(strip_tags($this->matkhau));
     $this->email=htmlspecialchars(strip_tags($this->email));
-    $this->facebook=htmlspecialchars(strip_tags($this->facebook));
-    $this->viber=htmlspecialchars(strip_tags($this->viber));
-    $this->skype=htmlspecialchars(strip_tags($this->skype));
+   
  
     // bind the values
     $stmt->bindParam(':ho', $this->ho);
     $stmt->bindParam(':ten', $this->ten);
     $stmt->bindParam(':sodienthoai', $this->sodienthoai);
-    $stmt->bindParam(':noicongtac', $this->noicongtac);
     $stmt->bindParam(':diachi', $this->diachi);
     $stmt->bindParam(':tendangnhap', $this->tendangnhap);
+    // $stmt->bindParam(':matkhau', $this->matkhau);
     $stmt->bindParam(':email', $this->email);
-    $stmt->bindParam(':facebook', $this->facebook);
-    $stmt->bindParam(':viber', $this->viber);
-    $stmt->bindParam(':skype', $this->skype);
+   
  
     // hash the password before saving to database
     $password_hash = password_hash($this->matkhau, PASSWORD_BCRYPT);
     $stmt->bindParam(':matkhau', $password_hash);
  
     // execute the query, also check if query was successful
+// try{$stmt->execute();}
+// catch(PDOException $exception) {
+//     echo(". $exception->message .");
+// }
+
     if($stmt->execute()){
         return true;
     }
@@ -90,23 +87,23 @@ function TaoTaiKhoan(){
 }
  
 // emailExists() method will be here
-function KTTaiKhoancotontai(){
- 
+function KTTaiKhoancotontai(){ //dành cho trang đăng nhập
+
     // query to check if email exists
     $query = "SELECT *
             FROM " . $this->table_name . "
-            WHERE tendangnhap = ? or email = ?";
+            WHERE tendangnhap = ?";
  
     // prepare the query
     $stmt = $this->conn->prepare( $query );
  
     // sanitize
     $this->tendangnhap=htmlspecialchars(strip_tags($this->tendangnhap));
-    $this->email=htmlspecialchars(strip_tags($this->email));
+    //$this->email=htmlspecialchars(strip_tags($this->email));
  
     // bind given email value
     $stmt->bindParam(1, $this->tendangnhap);
-    $stmt->bindParam(1, $this->email);
+    //$stmt->bindParam(1, $this->email);
  
     // execute the query
     $stmt->execute();
@@ -126,7 +123,6 @@ function KTTaiKhoancotontai(){
         $this->ten = $row['Ten'];
         $this->tendangnhap = $row['TenDangNhap'];
         $this->matkhau = $row['MatKhau'];
- 
         // return true because email exists in the database
         return true;
     }

@@ -41,9 +41,9 @@ include_once 'libs/php-jwt-master/src/JWT.php';
 use \Firebase\JWT\JWT;
  
 // generate jwt will be here
-//echo password_hash("123456", PASSWORD_DEFAULT);
-// echo $user->matkhau;
-// echo $data->matkhau;
+//echo password_hash("thien123", PASSWORD_DEFAULT);
+//echo $user->matkhau;
+//echo $data->matkhau;
 // check if email exists and if password is correct
 if($email_exists && password_verify($data->matkhau, $user->matkhau) ){
  

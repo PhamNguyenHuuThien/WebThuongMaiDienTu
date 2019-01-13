@@ -27,7 +27,7 @@ if($stmt->rowCount() >0){
  
     // products array
      $sanpham_arr=array();
-     $sanpham_arr["sanpham"]=array();
+    $sanpham_arr["sanpham"]=array();
  
     // retrieve our table contents
     // fetch() is faster than fetchAll()
@@ -50,6 +50,8 @@ if($stmt->rowCount() >0){
             "soluongban" => $row['SoLuongBan']
         ); 
         array_push($sanpham_arr["sanpham"], $sanpham_item);}
+       //array_push( $sanpham_item);
+   // }
  echo json_encode($sanpham_arr);
 
 // no products found will be here
