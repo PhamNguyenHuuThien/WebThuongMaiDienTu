@@ -4,12 +4,12 @@
            <ion-icon name="menu"></ion-icon>
        </button>
        <ion-title *ngIf="!isSearchbarOpened">Danh sách sản phẩm</ion-title>
-       <ion-searchbar *ngIf="isSearchbarOpened" showCancelButton="true" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
+       <ion-searchbar *ngIf="isSearchbarOpened" showCancelButton="true" (ionCancel)="isSearchbarOpened=false" ></ion-searchbar>
        <ion-buttons end>   
            <button ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened=true">
                 <ion-icon name="search"></ion-icon>
            </button>
-        </ion-buttons>
+        </ion-buttons><!--(search)="onSearch(&event)"-->
    </ion-navbar> 
 </ion-header>
 
