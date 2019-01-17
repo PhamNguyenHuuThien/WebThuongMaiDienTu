@@ -11,11 +11,12 @@ import { Observable } from "rxjs";
   templateUrl: 'sanpham.html'
 })
 export class SanPham {
+  public isSearchbarOpened = false;
   public items:any;
   constructor(public nav: NavController, public http: HttpClient) {
     this.getData();
   }
-
+  
   // register and go to home page
   register() {
     this.nav.setRoot(HomePage);
@@ -34,5 +35,8 @@ export class SanPham {
       console.log(result)
       this.items=result.sanpham;
     })
+  }
+  onSearch(event){
+    console.log(event.target.value);
   }
 }

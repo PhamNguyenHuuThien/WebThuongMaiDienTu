@@ -3,18 +3,24 @@
        <button ion-button menuToggle>
            <ion-icon name="menu"></ion-icon>
        </button>
-       <ion-title>Danh sách sản phẩm</ion-title>
-   </ion-navbar>
+       <ion-title *ngIf="!isSearchbarOpened">Danh sách sản phẩm</ion-title>
+       <ion-searchbar *ngIf="isSearchbarOpened" showCancelButton="true" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
+       <ion-buttons end>   
+           <button ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened=true">
+                <ion-icon name="search"></ion-icon>
+           </button>
+        </ion-buttons>
+   </ion-navbar> 
 </ion-header>
 
-<ion-content padding class="common-bg">
+<ion-content padding class="common-bg"> 
         <ion-card *ngFor="let item of items">
                 <img src="http://thien.opestek.com/API/Images/{{item.hinhminhhoa}}"/>
                 <ion-card-header>
                     <ion-card-title>{{item.TenSP}}</ion-card-title>
                 </ion-card-header>
                 <ion-card-content>
-                    <p>The content for this card</p>
+                    <p>{{item.giaban | number}} đồng/{{item.donvitinh}}</p>
                 </ion-card-content>
             </ion-card>
 </ion-content>
