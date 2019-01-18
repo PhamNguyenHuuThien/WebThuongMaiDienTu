@@ -30,7 +30,16 @@ public matkhau:string;
     });
   
     loading.present();
-if(ho!=""&&ten!=""&&email!=""&&sodienthoai!=""&&diachi!=""&&tendangnhap!=""&&matkhau!="" &&  ho!=null&&ten!=null&&sodienthoai!=null&&diachi!=null&&tendangnhap!=null&&matkhau!=null){
+if(ho==""||ten==""||email==""||sodienthoai==""||diachi==""||tendangnhap==""||matkhau=="" ||  ho==null||ten==null||sodienthoai==null||diachi==null||tendangnhap==null||matkhau==null){
+    loading.dismiss();
+    let alert = this.alertCtrl.create({
+      title: 'Chú ý',
+      subTitle: 'Vui lòng nhập đầy đủ tất cả thông tin',
+      buttons: ['Đồng ý']
+    });
+    alert.present();
+
+}else{
     this.XLDK.register(ho,ten,email,sodienthoai,diachi,tendangnhap,matkhau)
     .subscribe((result)=>
     {
@@ -71,17 +80,11 @@ if(ho!=""&&ten!=""&&email!=""&&sodienthoai!=""&&diachi!=""&&tendangnhap!=""&&mat
   alert.present();
   });
 }
-  else{
-    let alert = this.alertCtrl.create({
-      title: 'Chú ý',
-      subTitle: 'Vui lòng nhập đầy đủ tất cả thông tin',
-      buttons: ['Đồng ý']
-    });
-    alert.present();
+  
 
 
   }
-  }
+  
 
   // go to login page
   login() {
