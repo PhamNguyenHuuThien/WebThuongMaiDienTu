@@ -34,7 +34,7 @@ $user->email = $data->email;
 
  
 // use the create() method here
-echo ("Tạo tk");
+//echo ("Tạo tk");
 // echo (TaoTaiKhoan());
 // create the user
 if($user->TaoTaiKhoan()){
@@ -50,7 +50,7 @@ if($user->TaoTaiKhoan()){
 else{
  
     // set response code
-    http_response_code(400);
+    //http_response_code(400);
  
     // display message: unable to create user
     echo json_encode(array("message" => "Unable to create user."));

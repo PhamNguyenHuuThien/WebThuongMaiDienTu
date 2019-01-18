@@ -62,7 +62,7 @@ if(ho==""||ten==""||email==""||sodienthoai==""||diachi==""||tendangnhap==""||mat
         loading.dismiss();
         let alert = this.alertCtrl.create({
           title: 'Đăng ký thất bại',
-          subTitle: '1. Hãy kiểm tra và nhập đầy đủ thông tin\n2. Tên đăng nhập hoặc email đã tồn tại trên hệ thống!',
+          subTitle: 'Tên đăng nhập hoặc email đã tồn tại trên hệ thống!',
           buttons: ['Đồng ý']
         });
         alert.present();

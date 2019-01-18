@@ -29,7 +29,33 @@ class User{
 // create() method will be here
 // create new user record
 function TaoTaiKhoan(){
- 
+    //Kiểm tra tài khoản tồn tại chưa
+                $query = "SELECT *
+                FROM " . $this->table_name . "
+                WHERE tendangnhap = :user or email = :email";
+
+            // prepare the query
+            $stmt = $this->conn->prepare( $query );
+
+            // sanitize
+            $this->tendangnhap=htmlspecialchars(strip_tags($this->tendangnhap));
+            $this->email=htmlspecialchars(strip_tags($this->email));
+
+            // bind given email value
+            $stmt->bindParam(':user', $this->tendangnhap);
+            $stmt->bindParam(':email', $this->email);
+
+            // execute the query
+            $stmt->execute();
+
+            // get number of rows
+            $num = $stmt->rowCount();
+
+            if($num>0){
+                return false;
+            }
+else{
+
     // insert query
     $query = "INSERT INTO " . $this->table_name . "
             VALUE (
@@ -78,16 +104,23 @@ function TaoTaiKhoan(){
 // catch(PDOException $exception) {
 //     echo(". $exception->message .");
 // }
+    // query to check if email exists
+    
 
     if($stmt->execute()){
         return true;
     }
- 
-    return false;
+    else
+        return false;
+    }
+   return false;
 }
  
-// emailExists() method will be here
-function KTTaiKhoancotontai(){ //dành cho trang đăng nhập
+
+
+
+
+function DangNhap(){ //dành cho trang đăng nhập
 
     // query to check if email exists
     $query = "SELECT *
