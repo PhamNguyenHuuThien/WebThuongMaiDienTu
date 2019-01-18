@@ -30,7 +30,7 @@ public matkhau:string;
     });
   
     loading.present();
-if(ho!=""&&ten!=""&&email!=""&&sodienthoai!=""&&diachi!=""&&tendangnhap!=""&&matkhau!="" &&ho!=null&&ten!=null&&sodienthoai!=null&&diachi!=null&&tendangnhap!=null&&matkhau!=null){
+if(ho!=""&&ten!=""&&email!=""&&sodienthoai!=""&&diachi!=""&&tendangnhap!=""&&matkhau!="" &&  ho!=null&&ten!=null&&sodienthoai!=null&&diachi!=null&&tendangnhap!=null&&matkhau!=null){
     this.XLDK.register(ho,ten,email,sodienthoai,diachi,tendangnhap,matkhau)
     .subscribe((result)=>
     {

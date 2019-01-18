@@ -136,7 +136,7 @@ else{
           // Đăng nhập thành công thì lưu lại JWT vào storage, sau đó redirect tới trang dahshboard
           this.authService.setSession(result.jwt);
           //this.router.navigateByUrl('/dashboard');
-          this.nav.setRoot(HomePage);
+          this.nav.setRoot(HomePage,hoten);
         }
          if(result.message=="Login failed.") {
           loading.dismiss();
