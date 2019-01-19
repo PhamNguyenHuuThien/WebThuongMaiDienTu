@@ -40,9 +40,9 @@ public hoten:string;
     this.initializeApp();
 
     this.appMenuItems = [
-      {title: 'Trang chủ', component: HomePage, icon: 'home'},
-      {title: 'Sản phẩm', component: SanPham, icon: 'flower'},
-      {title: 'Thời tiết', component: LocalWeatherPage, icon: 'partly-sunny'}
+      //{title: '', component: HomePage, icon: ''},
+      {title: 'Trang chủ', component: SanPham, icon: 'home'}
+      //{title: 'Thời tiết', component: LocalWeatherPage, icon: 'partly-sunny'}
 
     ];
     this.hoten=sessionStorage.getItem('hoten');

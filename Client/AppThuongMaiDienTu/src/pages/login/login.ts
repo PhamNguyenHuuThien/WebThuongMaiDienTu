@@ -5,6 +5,7 @@ import {RegisterPage} from "../register/register";
 import {AuthService} from './auth.service';
 import { Router } from '@angular/router';
 import { load } from "@angular/core/src/render3";
+import { SanPham } from "../sanpham/sanpham";
 
 
 
@@ -136,7 +137,7 @@ else{
           // Đăng nhập thành công thì lưu lại JWT vào storage, sau đó redirect tới trang dahshboard
           this.authService.setSession(result.jwt);
           //this.router.navigateByUrl('/dashboard');
-          this.nav.setRoot(HomePage,hoten);
+          this.nav.setRoot(SanPham,hoten); 
         }
          if(result.message=="Login failed.") {
           loading.dismiss();
