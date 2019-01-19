@@ -5,7 +5,7 @@ import {HomePage} from "../home/home";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import {ChiTietSanPham} from "../chitietsanpham/chitietsanpham";
-
+import {SearchPage} from "../search/search";
 
 @Component({
   selector: 'sanpham',
@@ -42,5 +42,8 @@ export class SanPham {
   }
   ToiCTSP(item){
     this.nav.push(ChiTietSanPham,item);
+  }
+  GotoSearch(){
+    this.nav.push(SearchPage);
   }
 }

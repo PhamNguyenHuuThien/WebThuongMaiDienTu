@@ -26,6 +26,7 @@ import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 import {SanPham} from "../pages/sanpham/sanpham";
 import {ChiTietSanPham} from "../pages/chitietsanpham/chitietsanpham";
+import {SearchPage} from "../pages/search/search";
 import { AuthService } from "../pages/login/auth.service";
 import { Router } from "@angular/router";
 import { from } from "rxjs";
@@ -51,7 +52,8 @@ import { from } from "rxjs";
     TripDetailPage,
     TripsPage,
     SanPham,
-    ChiTietSanPham
+    ChiTietSanPham,
+    SearchPage
   ],
   imports: [
     BrowserModule,
@@ -80,7 +82,8 @@ import { from } from "rxjs";
     TripDetailPage,
     TripsPage,
     SanPham,
-    ChiTietSanPham
+    ChiTietSanPham,
+    SearchPage
   ],
   providers: [
     StatusBar,
