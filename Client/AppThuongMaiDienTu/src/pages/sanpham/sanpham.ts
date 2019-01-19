@@ -4,6 +4,7 @@ import {LoginPage} from "../login/login";
 import {HomePage} from "../home/home";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+import {ChiTietSanPham} from "../chitietsanpham/chitietsanpham";
 
 
 @Component({
@@ -38,5 +39,8 @@ export class SanPham {
   }
   onSearch(event){
     console.log(event.target.value);
+  }
+  ToiCTSP(item){
+    this.nav.push(ChiTietSanPham,item);
   }
 }

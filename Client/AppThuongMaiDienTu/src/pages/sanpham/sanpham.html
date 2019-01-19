@@ -14,13 +14,13 @@
 </ion-header>
 
 <ion-content padding class="common-bg"> 
-        <ion-card *ngFor="let item of items">
+        <ion-card *ngFor="let item of items" (click)="ToiCTSP(item)">
                 <img src="http://thien.opestek.com/API/Images/{{item.hinhminhhoa}}"/>
                 <ion-card-header>
                     <ion-card-title>{{item.TenSP}}</ion-card-title>
                 </ion-card-header>
                 <ion-card-content>
-                    <p>{{item.giaban | number}} đồng/{{item.donvitinh}}</p>
+                    <h2>{{item.giaban | number}} đồng/{{item.donvitinh}}</h2>
                 </ion-card-content>
             </ion-card>
 </ion-content>
