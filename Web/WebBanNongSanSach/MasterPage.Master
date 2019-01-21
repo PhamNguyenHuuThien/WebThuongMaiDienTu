@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebBanNongSanSach.MasterPage" %>
+
+<%@ Register Src="~/UCHeader.ascx" TagPrefix="uc1" TagName="UCHeader" %>
+<%@ Register Src="~/UCSlider.ascx" TagPrefix="uc1" TagName="UCSlider" %>
+<%@ Register Src="~/UCRight.ascx" TagPrefix="uc1" TagName="UCRight" %>
+<%@ Register Src="~/UCFooter.ascx" TagPrefix="uc1" TagName="UCFooter" %>
+<%@ Register Src="~/UCHead.ascx" TagPrefix="uc1" TagName="UCHead" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <uc1:UCHead runat="server" ID="UCHead" />
+    <title>
+        <asp:ContentPlaceHolder ID="TieuDe" runat="server"></asp:ContentPlaceHolder>
+        - Thế giới rau sạch
+		</title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+<body runat="server">
+    <form runat="server">
+        <uc1:UCHeader runat="server" ID="UCHeader" />
+
+        <!--  -->
+        <div class="clearfix"></div>
+        <uc1:UCSlider runat="server" ID="UCSlider" />
+        <div id="content">
+            <article>
+                <section class="content gallery pad1" style="padding: 0">
+                    <div class="midle_main_idclass fix1200_cus1">
+                        <div class="about-team">
+                            <div class="container">
+                                <div class="dv-child-left">
+                                    <asp:ContentPlaceHolder ID="NoiDung" runat="server"></asp:ContentPlaceHolder>
+                                </div>
+                                <uc1:UCRight runat="server" ID="UCRight" />
+                            </div>
+                        </div>
+                        <!--Cuối trang-->
+                        <uc1:UCFooter runat="server" ID="UCFooter" />
+                        <div class="clear"></div>
+                        <div class="clear"></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </form>
+</body>
+</html>

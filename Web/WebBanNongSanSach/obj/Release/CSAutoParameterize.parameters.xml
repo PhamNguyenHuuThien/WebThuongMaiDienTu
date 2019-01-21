@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="conn-Web.config Connection String" description="conn Connection String used in web.config by the application to access the database." defaultValue="Data Source=databasewebbanrau.database.windows.net;Initial Catalog=WebBanRauSach;Persist Security Info=True;User ID=thien;Password=Abc@123456789" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Nam3_HK1\\LapTrinhWeb\\BaiTap\\WebBan\ NongSanSach\\WebBanNongSanSach\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='conn']/@connectionString" />
+  </parameter>
+</parameters>

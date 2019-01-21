@@ -1,0 +1,317 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebBanNongSanSach.MasterPage" %>
+
+<%@ Register Src="~/UCHeader.ascx" TagPrefix="uc1" TagName="UCHeader" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="templates/1_shop_test/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="refresh" content="5400" />
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta property="fb:app_id" content="164566120964750">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="keywords" content="Th&#x1EBF; gi&#x1EDB;i rau s&#x1EA1;ch" />
+    <meta name="description" content="Th&#x1EBF; gi&#x1EDB;i rau s&#x1EA1;ch" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow">
+    <meta name="revisit-after" content="1 days" />
+    <meta name="generator" content="Thế giới rau sạch" />
+    <meta name="rating" content="General">
+    <meta property="og:url" content="index.aspx">
+    <meta property="og:description" content="Cung cấp các loại thực phẩm sạch">
+    <meta property="og:title" content="Thế giới rau sạch">
+    <meta property="og:image" content="datafiles/4448/upload/images/14867154122765_logo.png">
+    <meta property="og:site_name" content="thien.somee.com">
+    <meta property="og:type" content="product" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta itemprop="image" content="datafiles/4448/upload/images/14867154122765_logo.png">
+    <meta property="article:section" content="Th&#x1EBF; gi&#x1EDB;i rau s&#x1EA1;ch" />
+    <meta property="article:tag" content="Th&#x1EBF; gi&#x1EDB;i rau s&#x1EA1;ch" />
+    <meta property="article:author" content="thien.somee.com" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@thien.somee.com" />
+    <meta name="twitter:title" content="Th&#x1EBF; gi&#x1EDB;i rau s&#x1EA1;ch" />
+    <meta name="twitter:description" content="Th&#x1EBF; gi&#x1EDB;i rau s&#x1EA1;ch" />
+    <meta name="twitter:image" content="datafiles/4448/upload/images/14867154122765_logo.png" />
+    <meta name="twitter:url" content="Default.aspx" />
+    <title>Trang chủ - Thế giới rau sạch</title>
+    <link rel="shortcut icon" type="image/x-icon" href="datafiles/4448/upload/images/14867154122765_logo.png" />
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
+    <link href="css/global8ce2.css?v=6.8.0" rel="stylesheet" type="text/css">
+    <link href="../css/divbox.css" rel="stylesheet" type="text/css">
+    <link href="../css/bxslider.css" rel="stylesheet" type="text/css">
+
+    <script src="../js/divbox.js"></script>
+    <script src="js/me.js"></script>
+    <script src='../js/jquery.easing.1.3.js'></script>
+    <script src="../js/swfobject.js"></script>
+    <script src="../js/jquery.bxslider.min.js"></script>
+    <script src="../js/md5.js"></script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link href="css/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="templates/1_shop_test/css/customize.css" rel="stylesheet" type="text/css">
+
+
+
+    <link href="admin_customizec51b.css?t=358&amp;a=1536057476" rel="stylesheet" type="text/css">
+
+    <!-- //background css -->
+    <!-- end backgorund css -->
+    <script src="templates/1_shop_test/js/jquery.easydropdown.js"></script>
+
+    
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+    <!--Hiệu ứng WOw.js-->
+    <script src="/templates/300-up-222/js/wow.min.js"></script>
+<link href="/templates/300-up-222/css/animate.css" rel='stylesheet' type='text/css' />
+<script>
+    new WOW().init();
+</script>
+
+</head>
+<body>
+    <form runat="server">
+        <uc1:UCHeader runat="server" ID="UCHeader" />
+    </form>
+                <!--  -->
+                <div class="clearfix"></div>
+ 
+
+        <asp:ContentPlaceHolder ID="NoiDung" runat="server">
+              </asp:ContentPlaceHolder>
+        
+     <!--Cuối trang-->
+    <div id="banner_footer">
+        <ul>
+            <li>
+                <img src="../datafiles/4448/upload/images/apples-fruits-garden-6028.png" width="100%" /></li>
+            <div class="clr"></div>
+        </ul>
+    </div>
+    <div class="footer-copy">
+        <div class="container">
+            <div class="footer-copy-grids">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-6 col-min-12 footer-copy-grid footer-h1 cat wow bounceInLeft  " data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceInLeft">
+                        <h3><span>THẾ GIỚI RAU SẠCH</span></h3>
+                        <div class="nd">
+                            <p>H&atilde;y li&ecirc;n hệ với ch&uacute;ng t&ocirc;i để nhận được những tư vấn.</p>
+                            <p>Địa chỉ: Số 1011/4 Lê Hồng Phong, P. Phú Thọ, TP.TDM, Bình Dương</p>
+                            <p>Điện thoại: <a href="tel:+84 164 671 4040">+84 164 671 4040</a></p>
+                            <p>Email: <a href="mailto:bibi9768@gmail.com">bibi9768@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-6 col-min-12 footer-copy-grid footer-h2 wow bounceIn  " data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceIn;">
+                        <h3><span>Giới thiệu</span></h3>
+                        <ul class='nav-bottom navi_bottom  navi_bottom_cus1'>
+                            <li class='li_bottom li_bottom_cus1'><i class='' aria-hidden='true'></i><a class='a_navi_bottom a_navi_bottom_cus1' href='Vechungtoi.aspx'>Về chúng tôi</a></li>
+                            <li class='li_bottom li_bottom_cus1'><i class='' aria-hidden='true'></i><a class='a_navi_bottom a_navi_bottom_cus1' href='Tamnhinsumenh.aspx'>Tầm nhìn - sứ mệnh</a></li>
+                            <li class='li_bottom li_bottom_cus1'><i class='' aria-hidden='true'></i><a class='a_navi_bottom a_navi_bottom_cus1' href='Bomaytochuc.aspx'>Bộ máy tổ chức</a></li>
+                            <li class='li_bottom li_bottom_cus1'><i class='' aria-hidden='true'></i><a class='a_navi_bottom a_navi_bottom_cus1' href='Hethongphanphoi.aspx'>Hệ thống phân phối</a></li>
+                            <li class='li_bottom li_bottom_cus1'><i class='' aria-hidden='true'></i><a class='a_navi_bottom a_navi_bottom_cus1' href='Doitac.aspx'>Đối tác</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6 col-min-12 footer-copy-grid footer-h3 wow bounceInUp  " data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceInUp;">
+                        <h3><span>Điều khoản</span></h3>
+                        <ul class='nav-bottom navi_bottom  navi_bottom_cus1'>
+                            <li class='li_bottom li_bottom_cus1'><i class='' aria-hidden='true'></i><a class='a_navi_bottom a_navi_bottom_cus1' href='ChinhSachRiengTu.aspx'>Chính Sách Riêng Tư</a></li>
+                            <li class='li_bottom li_bottom_cus1'><i class='' aria-hidden='true'></i><a class='a_navi_bottom a_navi_bottom_cus1' href='DieuKhoanDieuKien.aspx'>Điều Khoản & Điều Kiện</a></li>
+                            <li class='li_bottom li_bottom_cus1'><i class='' aria-hidden='true'></i><a class='a_navi_bottom a_navi_bottom_cus1' href='ThoaThuanNguoiDung.aspx'>Thỏa Thuận Người Dùng</a></li>
+                            <li class='li_bottom li_bottom_cus1'><i class='' aria-hidden='true'></i><a class='a_navi_bottom a_navi_bottom_cus1' href='Chinhsachdoitra.aspx'>Chính sách đổi trả</a></li>
+                            <li class='li_bottom li_bottom_cus1'><i class='' aria-hidden='true'></i><a class='a_navi_bottom a_navi_bottom_cus1' href='Chinhsachbaohanh.aspx'>Chính sách bảo hành</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6 col-min-12 footer-copy-grid footer-h4 wow bounceInRight  " data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceInRight;">
+                        <h3><span>ĐĂNG KÝ NHẬN TIN</span></h3>
+                        <p>Đăng ký email để nhận thông tin khuyến mãi mới nhất từ chúng tôi!</p>
+                        <label>
+                            <input type="text" name="newsletter" id="newsletter_id" value="Nhập địa chỉ email..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập địa chỉ email...';}">
+                            <input type="button" value="Đăng ký" onclick="return NewsLetter();">
+                        </label>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="footer">
+        <div class="container">
+            <p class="footer-grid wow bounceInRight  " data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: bounceInRight;">
+                <span class="footer_copyright"><a target="_blank" href="#" title="Thiết Kế Website" class="a_copyright">Thiết Kế Website bởi PNHT
+              
+                <!--Xoá dòng cuối somee-->
+                    <script> $(document).ready(function () {
+                            $("div[style='opacity: 0.9; z-index: 2147483647; position: fixed; left: 0px; bottom: 0px; height: 65px; right: 0px; display: block; width: 100%; background-color: #202020; margin: 0px; padding: 0px;']").remove();
+                            $("div[style='margin: 0px; padding: 0px; left: 0px; width: 100%; height: 65px; right: 0px; bottom: 0px; display: block; position: fixed; z-index: 2147483647; opacity: 0.9; background-color: rgb(32, 32, 32);']").remove();
+                            $("div[onmouseover='S_ssac();']").remove();
+                            $("center").remove();
+                        });</script>
+        </div>
+    </div>
+    <p id="back-top" style="display: block;"><a href="#top"><span>TOP</span></a></p>
+    <script type="text/javascript">$(document).ready(function () { $("#back-top").hide(); $(function () { $(window).scroll(function () { if ($(this).scrollTop() > 100) { $('#back-top').fadeIn(); } else { $('#back-top').fadeOut(); } }); $('#back-top a').click(function () { $('body,html').animate({ scrollTop: 0 }, 800); return false; }); }); });</script>
+    <script type="text/javascript">
+        $(window).bind("load", function () {
+            var h_1 = $(".footer-h1").height();
+            var h_2 = $(".footer-h2").height();
+            var h_3 = $(".footer-h3").height();
+            var h_4 = $(".footer-h4").height();
+            var max_1 = h_1;
+            var max_2 = h_3;
+            if (h_1 < h_2) max_1 = h_2;
+            if (h_3 < h_4) max_2 = h_4;
+
+            var w_document = $(window).width();
+            // console.log(w_document)
+            if (w_document > 479 && w_document < 992) {
+                if (max_1 != 0) { $(".footer-h1").height(max_1); $(".footer-h2").height(max_1); }
+                if (max_2 != 0) { $(".footer-h3").height(max_2); $(".footer-h4").height(max_2); }
+            }
+        });
+    </script>
+    <script>
+        if ($('a.lightbox').length > 0) {
+            $('a.lightbox').divbox();
+        }
+    </script>
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;//vi_VN //en_US
+            js.src = "../connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.11&appId=164566120964750";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <style>
+        #cfacebook {
+            position: fixed;
+            bottom: 0px;
+            right: 8px;
+            z-index: 999999999999999;
+            width: 300px;
+            height: auto;
+            box-shadow: 6px 6px 6px 10px rgba(0,0,0,0.2);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            overflow: hidden;
+        }
+
+            #cfacebook .fchat {
+                float: left;
+                width: 100%;
+                height: 400px;
+                overflow: hidden;
+                display: none;
+                background-color: #fff;
+            }
+
+                #cfacebook .fchat .chat-single {
+                    float: left;
+                    line-height: 25px;
+                    line-height: 25px;
+                    color: #333;
+                    width: 100%;
+                }
+
+                    #cfacebook .fchat .chat-single a {
+                        float: right;
+                        text-decoration: none;
+                        margin-right: 10px;
+                        color: #888;
+                        font-size: 12px;
+                    }
+
+                        #cfacebook .fchat .chat-single a:hover {
+                            color: #222;
+                        }
+
+                #cfacebook .fchat .fb-page {
+                    margin-top: 0px;
+                    float: left;
+                }
+
+            #cfacebook a.chat_fb {
+                float: left;
+                padding: 0 25px;
+                width: 300px;
+                color: #fff;
+                text-decoration: none;
+                height: 40px;
+                line-height: 40px;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+                background-repeat: repeat-x;
+                background-size: auto;
+                background-position: 0 0;
+                background-color: #0065BF;
+                border: 0;
+                border-bottom: 1px solid #0065BF;
+                z-index: 9999999;
+                margin-right: 12px;
+                font-size: 18px;
+            }
+
+                #cfacebook a.chat_fb:hover {
+                    color: yellow;
+                    text-decoration: none;
+                }
+
+        .fchat_fb_showhi_hide {
+            display: none !important
+        }
+
+        .fchat_fb_showhi_show {
+            display: block !important
+        }
+
+        .cur {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function fchat() {
+            var tchat = document.getElementById("tchat").value;
+            if (tchat == 0 || tchat == '0') {
+                document.getElementById("fchat").style.display = "block";
+                document.getElementById("tchat").value = 1;
+            } else {
+                document.getElementById("fchat").style.display = "none";
+                document.getElementById("tchat").value = 0;
+            }
+        }
+        function SHOWHI_fb(argument) {
+            if ($(".fchat_fb_showhi_show").length > 0) {
+                console.log('1');
+                $(".fchat_fb_showhi").removeClass("fchat_fb_showhi_show");
+                $(".fchat_fb_showhi").addClass("fchat_fb_showhi_hide");
+            }
+            else {
+                $(".fchat_fb_showhi").removeClass("fchat_fb_showhi_hide");
+                $(".fchat_fb_showhi").addClass("fchat_fb_showhi_show");
+                console.log('1')
+            }
+        }
+        setTimeout(function () {
+            $(".fchat_fb_showhi").addClass("fchat_fb_showhi_show");
+        }, 15000);
+
+    </script>
+    
+</body>
+</html>

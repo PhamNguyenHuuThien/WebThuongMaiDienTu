@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="member.master.cs" Inherits="WebBanNongSanSach.member" %>
+
+<%@ Register Src="~/UCHead.ascx" TagPrefix="uc1" TagName="UCHead" %>
+<%@ Register Src="~/UCFooter.ascx" TagPrefix="uc1" TagName="UCFooter" %>
+<%@ Register Src="~/UCHeader.ascx" TagPrefix="uc1" TagName="UCHeader" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Trang cá nhân - Quản lý đơn hàng - Thay đổi thông tin</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <uc1:UCHead runat="server" ID="UCHead" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <uc1:UCHeader runat="server" ID="UCHeader" />
+            <div class="men dv-dangky-thanhvien">
+			<div class="container">
+				<div class="head_title_center header_center_tv header_center_tv_cus1">THÀNH VIÊN</div>
+<div class="left dv-dktv-left w30s__left--profile" style="width:180px; margin-right:8px;">
+    <div class="boxstyle" style="padding-right:8px;">
+        <div class="header_cp"><strong>Thành viên</strong></div>
+        <ul class="about_menu">
+            <li><a href="/DoiMatKhau.aspx" class="xanh">Đổi mật khẩu</a></li>
+            <li><a href="/Quanlytaikhoan.aspx" class="xanh">Đổi thông tin</a></li>
+        </ul>
+        <div class="header_cp"><strong></strong></div>
+       <%-- <ul class="about_menu">
+            <li class="cls_daxem_member"><a href="#" class=" xanh">Sản phẩm đã xem</a></li>
+            <li class="cls_yeuthich_member"><a href="#" class=" xanh">Sản phẩm yêu thích</a></li>
+            <li class="cls_munmua_member"><a href="#" class=" xanh">Sản phẩm muốn mua</a></li>
+        </ul>--%>
+        <div class="header_cp"><strong>Mua hàng</strong></div>
+        <ul class="about_menu">
+            <li><a href="/Donhangcuatoi.aspx" class="xanh">Đơn hàng của tôi</a></li>
+            <%--<li><a href="/Donhangchoxuly.aspx" class="xanh">Đơn hàng chờ xử lý</a></li>
+            <li><a href="/Donhangdangxuly.aspx" class="xanh">Đơn hàng đang xử lý</a>
+            </li>
+            <li><a href="/Donhanghoanthanh.aspx" class="xanh">Đơn hàng hoàn tất</a>
+            </li>--%>
+        </ul>
+            </div>
+</div>
+<style type="text/css">
+    .vuong_3 {
+        line-height: 25px !important;
+        height: 30px !important;
+        width: 30px !important;
+    }
+
+    .p_mb_trangthai_hienthi {
+        margin-top: 5px;
+        font-size: 12px
+    }
+
+    .tin_off {
+        color: red;
+    }
+</style>
+<div class="left dv-dktv-right w30__right--profile" style="width:550px;">
+
+            <asp:ContentPlaceHolder ID="NoiDung" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+                </div>				<div class="clearfix"> </div>
+			</div>
+		</div>
+        <uc1:UCFooter runat="server" ID="UCFooter" />
+    </form>
+</body>
+</html>
