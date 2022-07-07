@@ -37,7 +37,7 @@
     "ionic-angular": "^3.9.2",
     "ionic-plugin-keyboard": "^2.2.1",
     "ionicons": "4.5.1",
-    "moment": "^2.23.0",
+    "moment": "^2.29.4",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.3.3",
     "sw-toolbox": "3.6.0",
